@@ -1,0 +1,11 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="10179223" tvg-name="Sky Sports F1" tvg-logo="http://static.m3uimg.com/logos/240/549.png" group-title="Sport Package",Sky Sports F1
+http://m3uprovider.com:80/channel/1293223
+#EXTINF:-1 tvg-id="61812" tvg-name="E!" tvg-logo="http://static.m3uimg.com/logos/240/1203.png" group-title="Entertainment & Reality",E!
+http://m3uprovider.com:80/channel/234
+#EXTINF:-1 tvg-id="14902" tvg-name="HGTV East" tvg-logo="http://static.m3uimg.com/logos/240/2507.png" group-title="Entertainment & Reality",HGTV East
+http://m3uprovider.com:80/channel/336
+#EXTINF:-1 tvg-id="14909" tvg-name="Game Show Network" tvg-logo="http://static.m3uimg.com/logos/240/1311.png" group-title="Entertainment & Reality",Game Show Network
+http://m3uprovider.com:80/channel/712
+#EXTINF:-1 tvg-id="93430" tvg-name="BUZZR" tvg-logo="http://static.m3uimg.com/logos/240/4138.png" group-title="Entertainment & Reality",BUZZR
+http://m3uprovider.com:80/channel/712buzzr.m3u

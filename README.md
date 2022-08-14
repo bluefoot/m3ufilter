@@ -1,0 +1,50 @@
+# m3ufilter
+
+Serves as a proxy to an M3U server, such as an IPTV server. Downloads the M3U file from the server,
+filter out groups and channels based on pre-setup configuration or on-demand URL attributes,
+returns it back to the client.
+
+## Option 1: url call
+
+Setup your M3U player to call the `/getm3u` endpoint with the following query parameters:
+
+- **url**: url of the m3u file.
+- **groups** (optional): commma-separated list of groups to INCLUDE. Channels NOT belonging to groups in the list will be filtered out.
+- **exclude** (optional): comma-seaprated list of keywords to EXCLUDE. Channels containing any of the keywords will be filtered out.
+
+## Option 2: config file
+
+Setup your M3U player to call the `/getm3u` endpoint with the following query parameters:
+
+- **key**: name of the profile in the configuration file
+
+Copy `config.example.json` file to a `m3ufilter\config.json` file in the user data directory of your system and modify it.
+
+The script will try to locate the config file in the following locations:
+
+- **windows**: %%USERDIR%%\AppData\LocalLow\m3ufilter\config.ts
+- **mac**: ~/Library/Preferences/m3ufilter/config.ts
+- **linux**: ~/.local/share/m3ufilter/config.ts
+
+## Build and Run:
+
+`npm run start`
+
+## Test:
+
+`npm run test`
+
+## Dependencies:
+
+- **axios**: To perform HTTP requests to download m3u playlist on server side
+- **express**: HTTP Request/Response framework. Allows to create entrypoints and handlers
+
+## Dev-only dependencies:
+
+- **typescript**: to support typescript under `src/`. Hooked up to the "build" hook (see package.json), with the config in tsconfig.json.
+- **jest**: test runner and assertion lib
+- **babel**: jest supports typescript via Babel. Babel transpiles typescript into javascript so jest can run tests written in typescript
+- **types**: just the types for IDEs and compilation
+- **prettier**: code format
+- **tslint**: check for code issues. Runs in the "prebuild" hook (see package.json), with the config in tslint.json. Currently disabled for being too annoying
+- **node-mocks-http**: used to mock express request/response in controller handler tests

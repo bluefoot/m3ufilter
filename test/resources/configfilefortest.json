@@ -1,0 +1,26 @@
+{
+  "profiles": [
+    {
+      "key": "config1",
+      "value": {
+        "url": "http://url1",
+        "groupsToInclude": ["Sports", "Entertainment"],
+        "channelsToExclude": ["Soccer", "MLB"]
+      }
+    },
+    {
+      "key": "config2",
+      "value": {
+        "url": "http://url2",
+        "groupsToInclude": ["Sports"]
+      }
+    },
+    {
+      "key": "config3",
+      "value": {
+        "url": "http://url3",
+        "channelsToExclude": ["WWE"]
+      }
+    }
+  ]
+}
