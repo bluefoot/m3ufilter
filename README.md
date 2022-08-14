@@ -1,7 +1,7 @@
 # m3ufilter
 
 Serves as a proxy to an M3U server, such as an IPTV server. Downloads the M3U file from the server,
-filter out groups and channels based on pre-setup configuration or on-demand URL attributes,
+filters out groups and channels based on pre-setup configuration or on-demand URL attributes,
 returns it back to the client.
 
 ## Option 1: url call
