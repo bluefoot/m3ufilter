@@ -18,13 +18,13 @@ Setup your M3U player to call the `/getm3u` endpoint with the following query pa
 
 - **key**: name of the profile in the configuration file
 
-Copy `config.example.json` file to a `m3ufilter\config.json` file in the user data directory of your system and modify it.
+Copy `config.example.json` file to a `m3ufilter/config.json` file in the user data directory of your system and modify it.
 
 The script will try to locate the config file in the following locations:
 
-- **windows**: %%USERDIR%%\AppData\LocalLow\m3ufilter\config.ts
-- **mac**: ~/Library/Preferences/m3ufilter/config.ts
-- **linux**: ~/.local/share/m3ufilter/config.ts
+- **windows**: %%USERDIR%%\AppData\LocalLow\m3ufilter\config.json
+- **mac**: ~/Library/Preferences/m3ufilter/config.json
+- **linux**: ~/.local/share/m3ufilter/config.json
 
 ## Build and Run:
 
