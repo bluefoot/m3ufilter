@@ -1,8 +1,8 @@
 # m3ufilter
 
 Serves as a proxy to an M3U server, such as an IPTV server. Downloads the M3U file from the server,
-filters out groups and channels based on pre-setup configuration or on-demand URL attributes,
-returns it back to the client.
+filters out groups and channels based on pre-setup configuration or on-demand URL attributes and
+finally, returns the filtered M3U file back to the client.
 
 ## Option 1: url call
 
@@ -29,6 +29,15 @@ The script will try to locate the config file in the following locations:
 ## Build and Run:
 
 `npm run start`
+
+## How to create Windows package:
+
+1. Install `node` from nodejs.org (comes with `npm`)
+1. Build with `npm run build`
+1. Set aside the following directories/files: `dist`, `node_modules`, `package.json`
+1. Using Bat To Exe Converter, create a bat with the following command: `npm run start > m3ufilter.log`
+1. Save the .exe with Bat To Exe Converter
+1. Send the new .exe file's shortcut to `shell:start` folder
 
 ## Test:
 
