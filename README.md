@@ -30,7 +30,7 @@ The script will try to locate the config file in the following locations:
 
 `npm run start`
 
-## How to create Windows package:
+## How to create a Windows package:
 
 1. Install `node` from nodejs.org (comes with `npm`)
 1. Build with `npm run build`
