@@ -1,0 +1,47 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="10179" tvg-name="ESPN US" tvg-logo="http://static.m3uimg.com/logos/240/549.png" group-title="Sport Package",ESPN US
+http://m3uprovider.com:80/channel/129
+#EXTINF:-1 tvg-id="10179223" tvg-name="Sky Sports F1" tvg-logo="http://static.m3uimg.com/logos/240/549.png" group-title="Sport Package",Sky Sports F1
+http://m3uprovider.com:80/channel/1293223
+#EXTINF:-1 tvg-id="NULL" tvg-name="NHL 4" tvg-logo="http://static.m3uimg.com/logos/240/3918.png" group-title="NHL - National Hockey League",NHL 4
+http://m3uprovider.com:80/channel/7819
+#EXTINF:-1 tvg-id="NULL" tvg-name="CA - Global News Saskatoon" tvg-logo="http://static.m3uimg.com/logos/240/4281.png" group-title="Canada",CA - Global News Saskatoon
+http://m3uprovider.com:80/channel/781933333
+#EXTINF:-1 tvg-id="NULL" tvg-name="CA - Global News Winnipeg" tvg-logo="http://static.m3uimg.com/logos/240/4284.png" group-title="Canada",CA - Global News Winnipeg
+http://m3uprovider.com:80/channel/781912112
+#EXTINF:-1 tvg-id="16485" tvg-name="ESPNews US" tvg-logo="http://static.m3uimg.com/logos/240/1213.png" group-title="Sport Package",ESPNews US
+http://m3uprovider.com:80/channel/239
+#EXTINF:-1 tvg-id="NULL" tvg-name="CA - CBC Calgary" tvg-logo="http://static.m3uimg.com/logos/240/3927.png" group-title="Canada",CA - CBC Calgary
+http://m3uprovider.com:80/channel/8213
+#EXTINF:-1 tvg-id="61812" tvg-name="E!" tvg-logo="http://static.m3uimg.com/logos/240/1203.png" group-title="Entertainment & Reality",E!
+http://m3uprovider.com:80/channel/234
+#EXTINF:-1 tvg-id="45654" tvg-name="ESPNU" tvg-logo="http://static.m3uimg.com/logos/240/567.png" group-title="Sport Package",ESPNU
+http://m3uprovider.com:80/channel/138
+#EXTINF:-1 tvg-id="NULL" tvg-name="MTV Unplugged" tvg-logo="http://static.m3uimg.com/logos/240/4184.png" group-title="Entertainment & Reality",MTV Unplugged
+http://m3uprovider.com:80/channel/10646
+#EXTINF:-1 tvg-id="14902" tvg-name="HGTV East" tvg-logo="http://static.m3uimg.com/logos/240/2507.png" group-title="Entertainment & Reality",HGTV East
+http://m3uprovider.com:80/channel/336
+#EXTINF:-1 tvg-id="NULL" tvg-name="NHL 3" tvg-logo="http://static.m3uimg.com/logos/240/3917.png" group-title="NHL - National Hockey League",NHL 3
+http://m3uprovider.com:80/channel/7817
+#EXTINF:-1 tvg-id="14909" tvg-name="Game Show Network" tvg-logo="http://static.m3uimg.com/logos/240/1311.png" group-title="Entertainment & Reality",Game Show Network
+http://m3uprovider.com:80/channel/712
+#EXTINF:-1 tvg-id="93430" tvg-name="BUZZR" tvg-logo="http://static.m3uimg.com/logos/240/4138.png" group-title="Entertainment & Reality",BUZZR
+http://m3uprovider.com:80/channel/712buzzr.m3u
+#EXTINF:-1 tvg-id="75077" tvg-name="MTV2" tvg-logo="http://static.m3uimg.com/logos/240/4183.png" group-title="Entertainment & Reality",MTV2
+http://m3uprovider.com:80/channel/10644
+#EXTINF:-1 tvg-id="" tvg-name="Emtpy Group Channel 2" tvg-logo="http://some3232323.com/screenshots/124/12335.jpg" group-title="",Empty Group Channel 2
+http://m3uprovider.com/emptygroup2.m3u
+#EXTINF:-1 tvg-id="22561" tvg-name="MTV Classic" tvg-logo="http://static.m3uimg.com/logos/240/4185.png" group-title="Entertainment & Reality",MTV Classic
+http://m3uprovider.com:80/channel/10645
+#EXTINF:-1 tvg-id="NULL" tvg-name="FR - France24" tvg-logo="http://static.m3uimg.com/logos/240/2007.png" group-title="France",FR - France24
+http://iptu.org/ch/france24fr.m3u8
+#EXTINF:-1 tvg-id="NULL" tvg-name="NHL 5" tvg-logo="http://static.m3uimg.com/logos/240/3916.png" group-title="NHL - National Hockey League",NHL 5
+http://m3uprovider.com:80/channel/7815
+#EXTINF:-1 tvg-id="NULL" tvg-name="CA - Global News Regina" tvg-logo="http://static.m3uimg.com/logos/240/4280.png" group-title="Canada",CA - Global News Regina
+http://m3uprovider.com:80/channel/7819.m3u
+#EXTINF:-1 tvg-id="" tvg-name="Emtpy Group Channel 1" tvg-logo="http://some3232323.com/screenshots/124/12335.jpg" group-title="",Empty Group Channel 1
+http://m3uprovider.com/emptygroup1.m3u
+#EXTINF:-1 tvg-id="NULL" tvg-name="FR - PressTV" tvg-logo="http://static.m3uimg.com/logos/240/4357.png" group-title="France",FR - PressTV
+http://m3uprovider.com:80/channel/78193223.m3u
+#EXTINF:-1 tvg-id="" tvg-name="Emtpy Group Channel 3" tvg-logo="http://some3232323.com/screenshots/124/12335.jpg" group-title="",Empty Group Channel 3
+http://m3uprovider.com/emptygroup3.m3u

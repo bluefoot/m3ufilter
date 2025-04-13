@@ -1,0 +1,25 @@
+{
+  "profiles": [
+    {
+      "key": "config1",
+      "value": {
+        "url": "http://iptvserver.com/get.php?username=user&password=pwdH&type=m3u_plus&output=ts",
+        "groupsToInclude": ["Sports", "Entertainment", "Science"],
+        "channelsToExclude": ["Soccer", "MLB"]
+      }
+    },
+    {
+      "key": "sportsonly",
+      "value": {
+        "url": "http://anotheriptvserver.com/get.php?username=user&password=pwdH&type=m3u_plus&output=ts",
+        "groupsToInclude": ["Sports"]
+      }
+    },
+    {
+      "key": "full",
+      "value": {
+        "url": "http://myserver.com/get.php?pwd=pwd"
+      }
+    }
+  ]
+}

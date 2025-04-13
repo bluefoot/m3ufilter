@@ -1,0 +1,10 @@
+{
+  "profiles": [
+    {
+      "key": "full",
+      "value": {
+        "url": "http://url1"
+      }
+    }
+  ]
+}
