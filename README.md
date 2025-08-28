@@ -6,7 +6,8 @@ finally, returns the filtered M3U file back to the client.
 
 ## Install and run
 
-- These steps use and require [Docker](https://docs.docker.com/engine/install). But you can just run the code if you have node installed. See below.
+> [!NOTE]  
+> These steps use and require [Docker](https://docs.docker.com/engine/install). But you can just run the code if you have node installed (skip to "Build and run" if you wish to do that).
 
 - Get the code:
 
@@ -17,6 +18,7 @@ git clone https://github.com/bluefoot/m3ufilter.git
 - Create a docker image. For Linux, Mac or WSL, you can use the deploy.sh utility:
 
 ```
+cd m3ufilter
 sh deploy.sh
 ```
 
@@ -34,7 +36,7 @@ This will start the app on port 3000.  You can access it via: http://localhost:3
 
 ### Option 1: url call
 
-- Setup your player to call the `/getm3u` endpoint with the following query parameters. A config file is not needed:
+Setup your player to call the `/getm3u` endpoint with the following query parameters:
 
 - **url**: url of the m3u file.
 - **groups** (optional): commma-separated list of groups to INCLUDE. Channels NOT belonging to groups in the list will be filtered out.
@@ -54,7 +56,7 @@ This will start the app on port 3000.  You can access it via: http://localhost:3
 
 ### Bypassing filters and getting the full file
 
-Just ommit both `groups` and `exclude` from URL or config profile. The script will not apply any filters and return the full file from the server.
+Just ommit both `groups` and `exclude` parameters from URL or config profile. The script will not apply any filters and return the full file from the server. Keep in mind that the script may still filter down some of the headers.
 
 ## Developer info
 
@@ -62,11 +64,13 @@ Just ommit both `groups` and `exclude` from URL or config profile. The script wi
 
 Requirements: node and npm.
 
-Run it once
-`npm install`
+Run it once:
 
-Run it to build and run
-`npm run start`
+```npm install``
+
+THen run this to build and run:
+
+```npm run start```
 
 When running like this, the app will look for a config file in the following locations, depending on the operating system:
 
@@ -76,7 +80,7 @@ When running like this, the app will look for a config file in the following loc
 
 ### Test
 
-`npm run test`
+```npm run test```
 
 ### Dependencies
 
