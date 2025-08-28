@@ -1,0 +1,17 @@
+node_modules
+dist
+npm-debug.log
+
+.git
+.gitignore
+
+.DS_Store
+
+.prettierignore
+.prettierrc.json
+babel.config.js
+config.example.json
+config.json
+README.md
+eslint.json
+test

@@ -41,11 +41,21 @@ const setHeaders = (
   serverResponse: DownloadResponse,
   filteredM3uFileContents: string
 ) => {
-  res.set("Content-Type", serverResponse.headers["content-type"]);
-  res.set("Content-Description", serverResponse.headers["content-description"]);
-  res.set("Expires", serverResponse.headers["expires"]);
-  res.set("Cache-Control", serverResponse.headers["cache-control"]);
-  res.set("Content-Disposition", serverResponse.headers["content-disposition"]);
+  if (serverResponse.headers?.["content-type"]) {
+    res.set("Content-Type", serverResponse.headers["content-type"]);
+  }
+  if (serverResponse.headers?.["content-description"]) {
+    res.set("Content-Description", serverResponse.headers["content-description"]);
+  }
+  if (serverResponse.headers?.["expires"]) {
+    res.set("Expires", serverResponse.headers["expires"]);
+  }
+  if (serverResponse.headers?.["cache-control"]) {
+    res.set("Cache-Control", serverResponse.headers["cache-control"]);
+  }
+  if (serverResponse.headers?.["content-disposition"]) {
+    res.set("Content-Disposition", serverResponse.headers["content-disposition"]);
+  }
   res.set(
     "Content-Length",
     Buffer.byteLength(filteredM3uFileContents, "utf-8").toString()

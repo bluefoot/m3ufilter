@@ -4,9 +4,37 @@ Serves as a proxy to an M3U server, such as an IPTV server. Downloads the M3U fi
 filters out groups and channels based on pre-setup configuration or on-demand URL attributes and
 finally, returns the filtered M3U file back to the client.
 
-## Option 1: url call
+## Install and run
 
-Setup your M3U player to call the `/getm3u` endpoint with the following query parameters:
+- These steps use and require [Docker](https://docs.docker.com/engine/install). But you can just run the code if you have node installed. See below.
+
+- Get the code:
+
+```
+git clone https://github.com/bluefoot/m3ufilter.git
+```
+
+- Create a docker image. For Linux, Mac or WSL, you can use the deploy.sh utility:
+
+```
+sh deploy.sh
+```
+
+- **Optional**: copy `config.example.json` into a `config.json` file in any directory of your preference and edit it (see more details below).
+
+- Start a container. You can use your preferred container manager, or run (replace `</path/to/directory/containing/configfile/>`):
+
+```
+docker run -d --restart unless-stopped -t -p 3000:3000 -v </path/to/directory/containing/configfile/>:/etc/m3ufilter m3ufilter:latest
+```
+
+This will start the app on port 3000.  You can access it via: http://localhost:3000/getm3u
+
+## How to use
+
+### Option 1: url call
+
+- Setup your player to call the `/getm3u` endpoint with the following query parameters. A config file is not needed:
 
 - **url**: url of the m3u file.
 - **groups** (optional): commma-separated list of groups to INCLUDE. Channels NOT belonging to groups in the list will be filtered out.
@@ -14,63 +42,61 @@ Setup your M3U player to call the `/getm3u` endpoint with the following query pa
 
 *Example*: http://localhost:3000/getm3u?url=http%3A%2F%2Fmym3userver%2Fget.php%3Fmykey%3Dkey&groups=Sports,Movies&exclude=F1
 
-## Option 2: config file
+### Option 2: config file
 
-Setup your M3U player to call the `/getm3u` endpoint with the following query parameters:
+- Copy `config.example.json` into a `config.json` file in any directory of your preference, and make sure that the directory is mounted as a docker volume (see installation steps above).
 
-- **key**: name of the profile in the configuration file
+- In the file, you can setup one or more profiles. Each containing: m3u URL, groups to INCLUDE, groups to EXCLUDE.
 
-Copy `config.example.json` file to a `m3ufilter/config.json` file in the user data directory of your system and modify it.
+- Setup your player to call the `/getm3u` endpoint with the **key** parameter pointing to a profile name in the configuration file.
 
-The script will try to locate the config file in the following locations:
+*Example*: http://localhost:3000/getm3u?key=sports
+
+### Bypassing filters and getting the full file
+
+Just ommit both `groups` and `exclude` from URL or config profile. The script will not apply any filters and return the full file from the server.
+
+## Developer info
+
+### Build and run (for development or quick tests)
+
+Requirements: node and npm.
+
+Run it once
+`npm install`
+
+Run it to build and run
+`npm run start`
+
+When running like this, the app will look for a config file in the following locations, depending on the operating system:
 
 - **windows**: %%USERDIR%%\AppData\LocalLow\m3ufilter\config.json
 - **mac**: ~/Library/Preferences/m3ufilter/config.json
 - **linux**: ~/.local/share/m3ufilter/config.json
 
-*Example*: http://localhost:3000/getm3u?key=sports
-
-## Bypassing filters and getting the full file
-
-Just ommit both `groups` and `exclude` from URL or config profile. The script will not apply any filters and return the full file from the server.
-
-## Build and Run:
-
-Run it once
-` npm install`
-
-Run it to build and run
-`npm run start`
-
-## How to create a Windows package:
-
-1. Install `node` from nodejs.org (comes with `npm`)
-1. Build with `npm run build`
-1. Set aside the following directories/files: `dist`, `node_modules`, `package.json`
-1. Using Bat To Exe Converter, create a bat with the following command: `npm run start > m3ufilter.log`
-1. Save the .exe with Bat To Exe Converter
-1. Send the new .exe file's shortcut to `shell:start` folder
-
-## Test:
+### Test
 
 `npm run test`
 
-## Dependencies:
+### Dependencies
 
 - **axios**: To perform HTTP requests to download m3u playlist on server side
 - **express**: HTTP Request/Response framework. Allows to create entrypoints and handlers
 
-## Dev-only dependencies:
+### Dev-only dependencies
 
 - **typescript**: to support typescript under `src/`. Hooked up to the "build" hook (see package.json), with the config in tsconfig.json.
 - **jest**: test runner and assertion lib
 - **babel**: jest supports typescript via Babel. Babel transpiles typescript into javascript so jest can run tests written in typescript
 - **types**: just the types for IDEs and compilation
 - **prettier**: code format
-- **tslint**: check for code issues. Runs in the "prebuild" hook (see package.json), with the config in tslint.json. Currently disabled for being too annoying
 - **node-mocks-http**: used to mock express request/response in controller handler tests
 
 ## Version history
+
+### 1.0.1
+- Switch to Docker
+- Update libraries
 
 ### 1.0.0
 - First version

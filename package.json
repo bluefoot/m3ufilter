@@ -1,33 +1,32 @@
 {
   "name": "m3ufilter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/app-controller.js",
   "scripts": {
-    "prebuild": "#tslint -c tslint.json -p tsconfig.json --fix",
     "build": "tsc",
     "prestart": "npm run build",
-    "start": "node .",
+    "start": "node dist/app-controller.js",
     "test": "jest"
   },
   "author": "gewton",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.27.2",
-    "express": "^4.18.1"
+    "axios": "^1.11.0",
+    "express": "^5.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.10",
-    "@babel/preset-env": "^7.18.10",
-    "@babel/preset-typescript": "^7.18.6",
-    "@types/express": "^4.17.13",
-    "@types/jest": "^28.1.6",
-    "@types/node": "^18.6.4",
-    "babel-jest": "^28.1.3",
-    "jest": "^28.1.3",
-    "node-mocks-http": "^1.11.0",
-    "prettier": "2.7.1",
-    "tslint": "^6.1.3",
-    "typescript": "^4.7.4"
+    "@babel/core": "^7.28.3",
+    "@babel/preset-env": "^7.28.3",
+    "@babel/preset-typescript": "^7.27.1",
+    "@types/express": "^5.0.3",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.3.0",
+    "babel-jest": "^30.1.1",
+    "eslint": "^9.34.0",
+    "jest": "^30.1.1",
+    "node-mocks-http": "^1.17.2",
+    "prettier": "3.6.2",
+    "typescript": "^5.9.2"
   }
 }

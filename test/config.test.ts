@@ -95,6 +95,12 @@ describe("config", () => {
               groupsToInclude: ["Sports"],
             },
           },
+          {
+            key: "full",
+            value: {
+              url: "http://myserver.com/get.php?pwd=pwd"
+            },
+          },
         ],
       };
       expect(actualConfig).toStrictEqual(expectedConfig);

@@ -14,8 +14,8 @@ app.get("/getm3u", async (req: Request, res: Response) => {
   }
 });
 
-app.listen(port, "127.0.0.1", () => {
+app.listen(port, "0.0.0.0", () => {
   console.log(
-    `m3u filter server started on port ${port}. Try it with http://localhost:${port}/getm3u?profile=yourprofile`
+    `m3u filter server started on port ${port}.`
   );
 });
