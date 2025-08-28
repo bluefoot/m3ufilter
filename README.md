@@ -66,9 +66,9 @@ Requirements: node and npm.
 
 Run it once:
 
-```npm install``
+```npm install```
 
-THen run this to build and run:
+Then run this to build and run:
 
 ```npm run start```
 
